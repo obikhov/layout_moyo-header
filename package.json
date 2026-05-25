@@ -3,10 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Tests passed\""
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "lint": "npm run htmlhint && npm run stylelint",
+    "test": "npm run lint",
+    "htmlhint": "htmlhint src/index.html",
+    "stylelint": "stylelint 'src/styles/*.css'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@mate-academy/stylelint-config": "^0.0.15",
+    "htmlhint": "^1.9.2",
+    "parcel": "^2.16.4",
+    "stylelint": "^17.12.0",
+    "stylelint-scss": "^7.1.1"
+  }
 }
